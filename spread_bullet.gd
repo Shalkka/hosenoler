@@ -12,3 +12,7 @@ func _ready():
 func _process(delta):
 	position.x=position.x+velocity_x
 	position.y=position.y+velocity_y
+
+func set_velocity(velv):
+	velocity_x=velv.x
+	velocity_y=velv.y
