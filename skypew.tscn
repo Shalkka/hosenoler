@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bn34bqg2beori"]
+[gd_scene load_steps=16 format=3 uid="uid://bn34bqg2beori"]
 
 [ext_resource type="Script" path="res://overall.gd" id="1_0qc5w"]
 [ext_resource type="Texture2D" uid="uid://c75bmjiheesqs" path="res://stick_holder_sized.png" id="1_m34u3"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://d338uqbbjvyls" path="res://bullet.png" id="4_x80q6"]
 [ext_resource type="Texture2D" uid="uid://fartntc1bxxd" path="res://coil.png" id="5_hgd56"]
 [ext_resource type="Texture2D" uid="uid://7bbbsxtj3hl7" path="res://jetblade.png" id="5_vonbh"]
+[ext_resource type="Script" path="res://BulletRoll.gd" id="7_a3y4b"]
+[ext_resource type="Script" path="res://SkybogeyPile.gd" id="9_8vv7x"]
+[ext_resource type="Script" path="res://SkybogeyLayer.gd" id="10_ufyms"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c0cbh"]
 animations = [{
@@ -79,66 +82,79 @@ scale = Vector2(0.25, 0.25)
 script = ExtResource("3_lr551")
 
 [node name="Node2D" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D2" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D2"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D3" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D3"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D4" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D4"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D5" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D5"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D6" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D6"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D7" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D7"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D8" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D8"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D9" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D9"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Node2D10" type="Node2D" parent="BulletStack"]
+script = ExtResource("7_a3y4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BulletStack/Node2D10"]
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Skybogey" type="Node2D" parent="."]
 position = Vector2(528, 130)
+script = ExtResource("9_8vv7x")
 
 [node name="Node2D4" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
+script = ExtResource("10_ufyms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D4"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
 
 [node name="Node2D" type="Node2D" parent="Skybogey"]
 position = Vector2(-2, 0)
+script = ExtResource("10_ufyms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
@@ -149,45 +165,53 @@ position = Vector2(1, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D3"]
 position = Vector2(-3, 0)
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D2" type="Node2D" parent="Skybogey"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D2"]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D5" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D5"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D6" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D6"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D7" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D7"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D8" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D8"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D9" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D9"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
 
 [node name="Node2D10" type="Node2D" parent="Skybogey"]
 position = Vector2(-1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skybogey/Node2D10"]
 sprite_frames = SubResource("SpriteFrames_rjv6x")
+script = ExtResource("10_ufyms")
