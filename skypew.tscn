@@ -1,22 +1,22 @@
 [gd_scene load_steps=16 format=3 uid="uid://bn34bqg2beori"]
 
 [ext_resource type="Script" path="res://overall.gd" id="1_0qc5w"]
-[ext_resource type="Texture2D" uid="uid://c75bmjiheesqs" path="res://stick_holder_sized.png" id="1_m34u3"]
 [ext_resource type="Script" path="res://shooty.gd" id="2_hitf5"]
+[ext_resource type="Texture2D" uid="uid://dw2dlfdy63xcy" path="res://cannon_base.png" id="2_md2yp"]
 [ext_resource type="Script" path="res://spread_bullet.gd" id="3_lr551"]
 [ext_resource type="Script" path="res://barrel.gd" id="4_spmbg"]
-[ext_resource type="Texture2D" uid="uid://d338uqbbjvyls" path="res://bullet.png" id="4_x80q6"]
-[ext_resource type="Texture2D" uid="uid://fartntc1bxxd" path="res://coil.png" id="5_hgd56"]
-[ext_resource type="Texture2D" uid="uid://7bbbsxtj3hl7" path="res://jetblade.png" id="5_vonbh"]
+[ext_resource type="Texture2D" uid="uid://56bw4uxuyv6m" path="res://cannon_barrel.png" id="5_aea48"]
 [ext_resource type="Script" path="res://BulletRoll.gd" id="7_a3y4b"]
+[ext_resource type="Texture2D" uid="uid://d2jhyfwp32320" path="res://ball_crop_small.png" id="8_271bj"]
 [ext_resource type="Script" path="res://SkybogeyPile.gd" id="9_8vv7x"]
 [ext_resource type="Script" path="res://SkybogeyLayer.gd" id="10_ufyms"]
+[ext_resource type="Texture2D" uid="uid://bjiwou6dug6pn" path="res://ladybug.png" id="11_1o77h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c0cbh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_m34u3")
+"texture": ExtResource("2_md2yp")
 }],
 "loop": true,
 "name": &"default",
@@ -27,7 +27,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_hgd56")
+"texture": ExtResource("5_aea48")
 }],
 "loop": true,
 "name": &"default",
@@ -38,7 +38,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_x80q6")
+"texture": ExtResource("8_271bj")
 }],
 "loop": true,
 "name": &"default",
@@ -49,7 +49,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_vonbh")
+"texture": ExtResource("11_1o77h")
 }],
 "loop": true,
 "name": &"default",
@@ -64,16 +64,19 @@ script = ExtResource("1_0qc5w")
 position = Vector2(534, 646)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hunter"]
-position = Vector2(1, -36)
+position = Vector2(14, -43)
+scale = Vector2(0.0577411, 0.0577411)
 sprite_frames = SubResource("SpriteFrames_c0cbh")
 script = ExtResource("2_hitf5")
 
 [node name="Barrel" type="Node2D" parent="Hunter"]
+position = Vector2(0, -68)
 script = ExtResource("4_spmbg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hunter/Barrel"]
-position = Vector2(0, -73)
-scale = Vector2(0.332787, 0.332787)
+position = Vector2(7, -91)
+rotation = -0.958186
+scale = Vector2(0.0830602, 0.0830602)
 sprite_frames = SubResource("SpriteFrames_eosl6")
 
 [node name="BulletStack" type="Node2D" parent="."]
@@ -142,7 +145,7 @@ script = ExtResource("7_a3y4b")
 sprite_frames = SubResource("SpriteFrames_n67mr")
 
 [node name="Skybogey" type="Node2D" parent="."]
-position = Vector2(528, 130)
+position = Vector2(549, 130)
 script = ExtResource("9_8vv7x")
 
 [node name="Node2D4" type="Node2D" parent="Skybogey"]
